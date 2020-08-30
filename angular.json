@@ -117,8 +117,23 @@
               "devServerTarget": "angular-app-gsn:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@jefiozie/ngx-aws-deploy:deploy",
+          "options": {},
+          "configurations": {
+            "production": {
+              "configuration": "production",
+              "region": "us-east-1",
+              "bucket": "angular-deploy-bucket-acg-5d8bfd20"
+            }
+          }
         }
       }
-    }},
-  "defaultProject": "angular-app-gsn"
+    }
+  },
+  "defaultProject": "angular-app-gsn",
+  "cli": {
+    "analytics": false
+  }
 }
